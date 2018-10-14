@@ -138,8 +138,13 @@ public class Booking {
 	}
 
 
-	public void addServiceCharge(ServiceType serviceType, double cosst) {
+	public void addServiceCharge(ServiceType serviceType, double cost) {
+            if(isCheckedIn()){
 		charges.add(new ServiceCharge(serviceType, cost));
+            System.out.println("Service charge  added");}
+            else{
+            System.out.println("Room Not booked , Cannot add service record");
+            }
 	}
 
 
